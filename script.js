@@ -27,21 +27,21 @@ btn.addEventListener('click', () => {
 
     <div id="property1" class="mt-5">
         <p class="mb-5 font-bold text-2xl capitalize">${data[0].meanings[0].partOfSpeech}</p>
-        <p class="mb-3 text-pink-800 font-semibold">Meanings</p>
-        <ul class="list-disc text-pink-800">
+        <p class="mb-3  font-semibold">Meanings</p>
+        <ul class="list-disc ">
             <li> ${data[0].meanings[0].definitions[0].definition || ""}</li>
-            <p class="font-semibold text-pink-800 italic">Example: <span>${data[0].meanings[0].definitions[0].example || ""} </span></p>
+            <p class="font-semibold italic mt-3">Example: <span>${data[0].meanings[0].definitions[0].example || ""} </span></p>
     
         </ul>
         
     </div>
 
     <div>
-        <p class="mt-5 font-bold text-pink-800">Synonyms: <span class="text-pink-800">${data[0].meanings[0].definitions[0].synonyms[0] || ""} </span></p>
+        <p class="mt-5 font-bold ">Synonyms: <span class="">${data[0].meanings[0].definitions[0].synonyms[0] || ""} </span></p>
     </div>
 
         `
-        sound.setAttribute('src', `${data[0].phonetics[0].audio || data[0].phonetics[1].audio}`);
+        sound.setAttribute('src', `${data[0].phonetics[0].audio || data[0].phonetics[1].audio || data[0].phonetics[2].audio || data[0].phonetics[3].audio}`);
         console.log(sound);
 
     })
